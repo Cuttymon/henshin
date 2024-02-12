@@ -1,0 +1,26 @@
+    name: Update File
+
+    on:
+      schedule:
+        - cron: '0 * * * *' # This will make the action run on an hourly basis
+        workflow_dispatch:
+
+    jobs:
+      update-file:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v3
+        
+        - name: Download and Modify File
+          run: |
+            curl -o myfile.txt 'https://api1.example.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
+            sed -i 's/down: 100/down: 400/g' myfile.txt
+      
+        - name: Commit and Push
+          run: |
+            git config --local user.email "action@site.com"
+            git config --local user.name "GitHub Action"
+            git add myfile.txt
+            git commit -m "Update file" && git push
