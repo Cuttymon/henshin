@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Download and Modify File
         run: |
-          curl -o myfile.txt 'https://api1.example.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
+          curl -o myfile.txt 'https://api1.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
           sed -i 's/down: 100/down: 400/g' myfile.txt
   
       - name: Commit and Push
