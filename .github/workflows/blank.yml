@@ -27,13 +27,13 @@ jobs:
       # 使用运行环境的shell运行单个命令
       - name: 下载和修改文件
         run: |
-          curl -o myfile 'https://api1.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
-          sed -i 's/down: 100/down: 400/g' myfile
+          curl -o 免费机场-付费机场 'https://api1.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
+          sed -i 's/down: 100/down: 400/g' 免费机场-付费机场
   
       - name: 提交和推送
         run: |
           git config --local user.email "action@site.com"
           git config --local user.name "GitHub Action"
-          git add myfile
+          git add 免费机场-付费机场
           git diff --quiet && git diff --staged --quiet || git commit -m "更新文件"
           git push
