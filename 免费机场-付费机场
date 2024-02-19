@@ -27,16 +27,11 @@ proxies:
     - { name: 联通用日本2, server: jp.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
     - { name: 移动用新加坡1, server: sg.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
     - { name: 联通用新加坡2, server: sg.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
-    - { name: ipv6-美国1, server: ipv6-us.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
-    - { name: ipv6-新加坡1, server: ipv6-sg.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
-    - { name: ipv6-新加坡2, server: ipv6-sg.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
-    - { name: ipv6-日本1, server: ipv6-jp.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
-    - { name: ipv6-日本2, server: ipv6-jp.555199.xyz, port: 5000, ports: 5000-6000, mport: 5000-6000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 20, down: 300 }
     - { name: 香港5（移动不要用）, server: hk5.666197.xyz, port: 54211, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria, auth_str: cd25434f-72e2-4fe3-bf54-42be5d303472, fast-open: true, disable_mtu_discovery: true, up: 20, down: 80, protocol: udp }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, ipv6-美国1, ipv6-新加坡1, ipv6-新加坡2, ipv6-日本1, ipv6-日本2, 香港5（移动不要用）] }
-    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, ipv6-美国1, ipv6-新加坡1, ipv6-新加坡2, ipv6-日本1, ipv6-日本2, 香港5（移动不要用）], url: 'http://cp.cloudflare.com', interval: 3600 }
-    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, ipv6-美国1, ipv6-新加坡1, ipv6-新加坡2, ipv6-日本1, ipv6-日本2, 香港5（移动不要用）], url: 'http://cp.cloudflare.com', interval: 450 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, 香港5（移动不要用）] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, 香港5（移动不要用）], url: 'http://cp.cloudflare.com', interval: 3600 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2, 香港5（移动不要用）], url: 'http://cp.cloudflare.com', interval: 450 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
