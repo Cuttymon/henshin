@@ -28,7 +28,7 @@ jobs:
       - name: 下载和修改文件
         run: |
           curl -o 免费机场-付费机场 'https://api1.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=8325e7673530ce15cad8e1d915658cec&flag=clashmeta'
-          sed -i 's/down: 100/down: 300/g' 免费机场-付费机场
+          sed -i 's/down: 100/down: 400/g' 免费机场-付费机场
   
       - name: 提交和推送
         run: |
