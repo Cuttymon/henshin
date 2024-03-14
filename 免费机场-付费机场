@@ -22,27 +22,36 @@ proxies:
     - { name: w.免费机场.com, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 使用最新版本软件, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 电信用美国1, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 联通用美国2, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用美国3, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用日本1, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 联通用美国2, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 联通用日本2, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用新加坡1, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 联通用新加坡2, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2], url: 'http://cp.cloudflare.com', interval: 3600 }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
-    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 移动用日本1, 联通用日本2, 移动用新加坡1, 联通用新加坡2], url: 'http://cp.cloudflare.com', interval: 450 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2], url: 'http://cp.cloudflare.com', interval: 3600 }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2] }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 移动用美国3, 移动用日本1, 联通用美国2, 联通用日本2, 移动用新加坡1, 联通用新加坡2], url: 'http://cp.cloudflare.com', interval: 450 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
     - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,代理节点选择'
-    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
-    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
     - 'DOMAIN,developer.apple.com,代理节点选择'
     - 'DOMAIN-SUFFIX,digicert.com,代理节点选择'
     - 'DOMAIN,ocsp.apple.com,代理节点选择'
@@ -195,10 +204,27 @@ rules:
     - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
     - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
     - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'GEOSITE,NETFLIX,Netflix分流'
+    - 'GEOSITE,BAHAMUT,Bahamut(动画疯)分流'
+    - 'GEOSITE,DISNEY,Disney分流'
+    - 'GEOSITE,SPOTIFY,Spotify分流'
+    - 'DOMAIN-KEYWORD,youtube,YouTube分流'
+    - 'DOMAIN,youtubei.googleapis.com,YouTube分流'
+    - 'DOMAIN,yt3.ggpht.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,googlevideo.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,gvt2.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,withyoutube.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtu.be,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtube-nocookie.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtube.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtubeeducation.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtubegaming.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,youtubekids.com,YouTube分流'
+    - 'DOMAIN-SUFFIX,yt.be,YouTube分流'
+    - 'DOMAIN-SUFFIX,ytimg.com,YouTube分流'
     - 'DOMAIN-KEYWORD,amazon,代理节点选择'
     - 'DOMAIN-KEYWORD,google,代理节点选择'
     - 'DOMAIN-KEYWORD,gmail,代理节点选择'
-    - 'DOMAIN-KEYWORD,youtube,YouTube分流'
     - 'DOMAIN-KEYWORD,facebook,代理节点选择'
     - 'DOMAIN-SUFFIX,fb.me,代理节点选择'
     - 'DOMAIN-SUFFIX,fbcdn.net,代理节点选择'
@@ -207,7 +233,6 @@ rules:
     - 'DOMAIN-KEYWORD,dropbox,代理节点选择'
     - 'DOMAIN-SUFFIX,twimg.com,代理节点选择'
     - 'DOMAIN-KEYWORD,blogspot,代理节点选择'
-    - 'DOMAIN-SUFFIX,youtu.be,YouTube分流'
     - 'DOMAIN-KEYWORD,whatsapp,代理节点选择'
     - 'DOMAIN-SUFFIX,microsoft.com,代理节点选择'
     - 'DOMAIN-SUFFIX,microsoftonline.com,代理节点选择'
@@ -477,24 +502,6 @@ rules:
     - 'DOMAIN-SUFFIX,yimg.com,代理节点选择'
     - 'DOMAIN-SUFFIX,ying.com,代理节点选择'
     - 'DOMAIN-SUFFIX,yoyo.org,代理节点选择'
-    - 'GEOSITE,NETFLIX,Netflix分流'
-    - 'GEOSITE,BAHAMUT,Bahamut(动画疯)分流'
-    - 'GEOSITE,DISNEY,Disney分流'
-    - 'GEOSITE,SPOTIFY,Spotify分流'
-    - 'DOMAIN-KEYWORD,youtube,YouTube分流'
-    - 'DOMAIN,youtubei.googleapis.com,YouTube分流'
-    - 'DOMAIN,yt3.ggpht.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,googlevideo.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,gvt2.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,withyoutube.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtu.be,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtube-nocookie.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtube.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtubeeducation.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtubegaming.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,youtubekids.com,YouTube分流'
-    - 'DOMAIN-SUFFIX,yt.be,YouTube分流'
-    - 'DOMAIN-SUFFIX,ytimg.com,YouTube分流'
     - 'DOMAIN-SUFFIX,telegra.ph,代理节点选择'
     - 'DOMAIN-SUFFIX,telegram.org,代理节点选择'
     - 'IP-CIDR,91.108.4.0/22,代理节点选择,no-resolve'
@@ -523,16 +530,5 @@ rules:
     - 'IP-CIDR,220.181.174.162/32,代理节点选择,no-resolve'
     - 'IP-CIDR,220.181.174.226/32,代理节点选择,no-resolve'
     - 'IP-CIDR,220.181.174.34/32,代理节点选择,no-resolve'
-    - 'DOMAIN,injections.adguard.org,DIRECT'
-    - 'DOMAIN,local.adguard.org,DIRECT'
-    - 'DOMAIN-SUFFIX,local,DIRECT'
-    - 'IP-CIDR,127.0.0.0/8,DIRECT'
-    - 'IP-CIDR,172.16.0.0/12,DIRECT'
-    - 'IP-CIDR,192.168.0.0/16,DIRECT'
-    - 'IP-CIDR,10.0.0.0/8,DIRECT'
-    - 'IP-CIDR,17.0.0.0/8,DIRECT'
-    - 'IP-CIDR,100.64.0.0/10,DIRECT'
-    - 'IP-CIDR,224.0.0.0/4,DIRECT'
-    - 'IP-CIDR6,fe80::/10,DIRECT'
     - 'GEOIP,CN,DIRECT'
     - 'MATCH,代理节点选择'
