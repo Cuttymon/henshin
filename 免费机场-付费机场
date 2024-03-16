@@ -4,7 +4,6 @@ mode: rule
 log-level: info
 external-controller: '127.0.0.1:9097'
 unified-delay: true
-ipv6: true
 dns:
     enable: true
     listen: '127.0.0.1:35353'
