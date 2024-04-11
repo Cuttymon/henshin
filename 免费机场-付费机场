@@ -18,26 +18,23 @@ dns:
     fallback: [1.1.1.1, 208.67.222.222]
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-    - { name: ClashVerge无法点↖NEW更新, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 重新下载覆盖安装, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 官网：, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: w.免费机场.com, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 使用最新版本软件, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 电信用美国1, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 美国3, server: us3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 联通用美国2, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 电信用美国1, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 联通用美国2, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 联通用日本2, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用新加坡1, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1] }
-    - { name: 故障转移, type: fallback, proxies: [ClashVerge无法点↖NEW更新, 重新下载覆盖安装, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 美国3, 联通用美国2, 联通用日本2, 移动用新加坡1], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 代理节点选择, type: select, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1] }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 联通用日本2, 移动用新加坡1], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN,injections.adguard.org,DIRECT'
