@@ -25,20 +25,25 @@ proxies:
     - { name: 联通用美国2, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用美国3, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 教育网用美国, server: us.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 联通用日本2, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: ipv6美国, server: ipv6us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 联通用日本, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 移动用日本, server: sg.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 教育网用日本, server: jp.555199.xyz, port: 20000, ports: 20000-30000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 移动用新加坡1, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: ipv6日本, server: ipv6jp.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 移动用新加坡, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: 联通用新加坡, server: jp.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 教育网用新加坡, server: sg.555199.xyz, port: 5000, ports: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
+    - { name: ipv6新加坡, server: ipv6sg.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡] }
-    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, 联通用日本2, 教育网用日本, 移动用新加坡1, 教育网用新加坡], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 代理节点选择, type: select, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 使用最新版本软件, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN,injections.adguard.org,DIRECT'
