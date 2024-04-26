@@ -10,12 +10,11 @@ dns:
     listen: '127.0.0.1:35353'
     ipv6: true
     proxy-server-nameserver: [119.29.29.29]
-    default-nameserver: [119.29.29.29, 223.5.5.5]
     enhanced-mode: fake-ip
     fake-ip-range: 198.18.0.1/16
     fake-ip-filter: ['*.lan', 'stun.*.*.*', 'stun.*.*', time.windows.com, time.nist.gov, time.apple.com, time.asia.apple.com, '*.ntp.org.cn', '*.openwrt.pool.ntp.org', time1.cloud.tencent.com, time.ustc.edu.cn, pool.ntp.org, ntp.ubuntu.com, ntp.aliyun.com, ntp1.aliyun.com, ntp2.aliyun.com, ntp3.aliyun.com, ntp4.aliyun.com, ntp5.aliyun.com, ntp6.aliyun.com, ntp7.aliyun.com, time1.aliyun.com, time2.aliyun.com, time3.aliyun.com, time4.aliyun.com, time5.aliyun.com, time6.aliyun.com, time7.aliyun.com, '*.time.edu.cn', time1.apple.com, time2.apple.com, time3.apple.com, time4.apple.com, time5.apple.com, time6.apple.com, time7.apple.com, time1.google.com, time2.google.com, time3.google.com, time4.google.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, '*.msftconnecttest.com', '*.msftncsi.com', localhost.ptlogin2.qq.com, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.ipv6.microsoft.com', '*.*.xboxlive.com', speedtest.cros.wr.pvp.net]
-    nameserver: [119.29.29.29, 223.5.5.5]
-    fallback: [1.1.1.1, 208.67.222.222]
+    nameserver: ['https://120.53.53.53/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://1.1.1.1/dns-query', 'https://doh.opendns.com/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
     - { name: 官网：, server: us.555199.xyz, port: 5000, ports: 5000-12000, ip-version: ipv6-prefer, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
@@ -605,5 +604,49 @@ rules:
     - 'IP-CIDR,100.64.0.0/10,DIRECT'
     - 'IP-CIDR,224.0.0.0/4,DIRECT'
     - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-KEYWORD,Thunder,DIRECT'
+    - 'DOMAIN-KEYWORD,XLLiveUD,DIRECT'
+    - 'DOMAIN-KEYWORD,aria2,DIRECT'
+    - 'DOMAIN-KEYWORD,thunder,DIRECT'
+    - 'DOMAIN-KEYWORD,xlliveud,DIRECT'
+    - 'DOMAIN-KEYWORD,xunlei,DIRECT'
+    - 'DOMAIN-KEYWORD,yunpan,DIRECT'
+    - 'DOMAIN-SUFFIX,qbittorrent.org,DIRECT'
+    - 'DOMAIN-SUFFIX,smtp,DIRECT'
+    - 'PROCESS-NAME,BitComet,DIRECT'
+    - 'PROCESS-NAME,BitComet.exe,DIRECT'
+    - 'PROCESS-NAME,BitComet_x64.exe,DIRECT'
+    - 'PROCESS-NAME,DownloadService,DIRECT'
+    - 'PROCESS-NAME,DownloadService.exe,DIRECT'
+    - 'PROCESS-NAME,Folx,DIRECT'
+    - 'PROCESS-NAME,Folx.exe,DIRECT'
+    - 'PROCESS-NAME,Motrix.app,DIRECT'
+    - 'PROCESS-NAME,NetTransport,DIRECT'
+    - 'PROCESS-NAME,NetTransport.exe,DIRECT'
+    - 'PROCESS-NAME,Thunder,DIRECT'
+    - 'PROCESS-NAME,Thunder.exe,DIRECT'
+    - 'PROCESS-NAME,ThunderVIP.exe,DIRECT'
+    - 'PROCESS-NAME,Transmission,DIRECT'
+    - 'PROCESS-NAME,Transmission.exe,DIRECT'
+    - 'PROCESS-NAME,WebTorrent Helper.exe,DIRECT'
+    - 'PROCESS-NAME,WebTorrent,DIRECT'
+    - 'PROCESS-NAME,WebTorrent.exe,DIRECT'
+    - 'PROCESS-NAME,WebTorrentHelper,DIRECT'
+    - 'PROCESS-NAME,WebTorrentHelper.exe,DIRECT'
+    - 'PROCESS-NAME,Weiyun,DIRECT'
+    - 'PROCESS-NAME,Weiyun.exe,DIRECT'
+    - 'PROCESS-NAME,amuled,DIRECT'
+    - 'PROCESS-NAME,aria2c,DIRECT'
+    - 'PROCESS-NAME,aria2c.exe,DIRECT'
+    - 'PROCESS-NAME,baidunetdisk.exe,DIRECT'
+    - 'PROCESS-NAME,fdm,DIRECT'
+    - 'PROCESS-NAME,fdm.exe,DIRECT'
+    - 'PROCESS-NAME,qBittorrent,DIRECT'
+    - 'PROCESS-NAME,qbittorrent,DIRECT'
+    - 'PROCESS-NAME,qbittorrent.exe,DIRECT'
+    - 'PROCESS-NAME,transmission-daemon.exe,DIRECT'
+    - 'PROCESS-NAME,transmission-qt.exe,DIRECT'
+    - 'PROCESS-NAME,uTorrent,DIRECT'
+    - 'PROCESS-NAME,uTorrent.exe,DIRECT'
     - 'GEOIP,CN,DIRECT'
     - 'MATCH,代理节点选择'
