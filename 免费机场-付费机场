@@ -48,6 +48,8 @@ proxy-groups:
     - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
     - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
     - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡], url: 'http://1.1.1.1/generate_204', interval: 1000 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡], url: 'http://1.1.1.1/generate_204', interval: 450 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
