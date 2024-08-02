@@ -22,14 +22,12 @@ dns:
     fallback: ['https://208.67.220.220/dns-query', 'tls://8.8.4.4', 'tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-    - { name: 电信买套餐B更快, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 50 }
     - { name: 官网：, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: w.免费机场.com, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 电信用美国1, server: us.555199.xyz, port: 5000, ports: 5000-12000, mport: 5000-12000, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 联通用美国2, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用美国3, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 教育网用美国, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: VLESS美国, type: vless, server: us2.555199.xyz, port: 443, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
     - { name: ipv6美国, server: ipv6us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 联通用日本, server: jp.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 移动用日本, server: sg.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
@@ -39,23 +37,17 @@ proxies:
     - { name: 联通用新加坡, server: jp.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: 教育网用新加坡, server: sg.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
     - { name: ipv6新加坡, server: ipv6sg.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 400 }
-    - { name: 联通优化VLESS日本, type: vless, server: jp.555199.xyz, port: 443, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
-    - { name: 移动优化VLESS日本, type: vless, server: sg.555199.xyz, port: 63999, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
-    - { name: 联通优化VLESS新加坡, type: vless, server: jp.555199.xyz, port: 63999, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
-    - { name: 移动优化VLESS新加坡, type: vless, server: sg.555199.xyz, port: 443, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
-    - { name: IPv6-VLESS日本, type: vless, server: ipv6jp.555199.xyz, port: 443, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
-    - { name: IPv6-VLESS新加坡, type: vless, server: ipv6sg.555199.xyz, port: 443, uuid: cd25434f-72e2-4fe3-bf54-42be5d303472, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: sg.555199.xyz }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡] }
-    - { name: 自动选择, type: url-test, proxies: [电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡], url: 'http://1.1.1.1', interval: 600 }
-    - { name: 故障转移, type: fallback, proxies: [电信买套餐B更快, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, VLESS美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡, 联通优化VLESS日本, 移动优化VLESS日本, 联通优化VLESS新加坡, 移动优化VLESS新加坡, IPv6-VLESS日本, IPv6-VLESS新加坡], url: 'http://1.1.1.1', interval: 450 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: ChatGPT分流, type: select, proxies: [代理节点选择, 官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡], url: 'http://1.1.1.1', interval: 600 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, w.免费机场.com, 电信用美国1, 联通用美国2, 移动用美国3, 教育网用美国, ipv6美国, 联通用日本, 移动用日本, 教育网用日本, ipv6日本, 移动用新加坡, 联通用新加坡, 教育网用新加坡, ipv6新加坡], url: 'http://1.1.1.1', interval: 450 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
