@@ -25,7 +25,7 @@ proxies:
     - { name: 官网：, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 3w.付费机场.com, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: ChatGPT解锁专用分流节点, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 法国, server: fr.666197.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 电信用美国1, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 联通用美国2, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 移动用美国3, server: us.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
