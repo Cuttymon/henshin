@@ -24,25 +24,21 @@ dns:
 proxies:
     - { name: ChatGPT解锁专用分流节点, server: us-kjlu3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 美国, server: us-kjlu3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: ipv6美国, server: ipv6us-kjlu3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 日本, server: jp-40g7v.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 移动用日本, server: jp-40g7v.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: ipv6日本, server: ipv6jp-kjlu3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 新加坡, server: sg-5k21v.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: 联通用新加坡2, server: sg-5k21v.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
-    - { name: ipv6新加坡, server: ipv6sg-kjlu3.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: 新加坡, server: newsg--ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: 联通用新加坡2, server: newsg--ceg5.555199.xyz, port: 63998, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡] }
-    - { name: 自动选择, type: url-test, proxies: [ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡], url: 'http://1.1.1.1', interval: 600 }
-    - { name: 故障转移, type: fallback, proxies: [ChatGPT解锁专用分流节点, 法国, 美国, ipv6美国, 日本, 移动用日本, ipv6日本, 新加坡, 联通用新加坡2, ipv6新加坡], url: 'http://1.1.1.1', interval: 450 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2] }
+    - { name: 自动选择, type: url-test, proxies: [ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2], url: 'http://1.1.1.1', interval: 600 }
+    - { name: 故障转移, type: fallback, proxies: [ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡, 联通用新加坡2], url: 'http://1.1.1.1', interval: 450 }
 rules:
     - 'DOMAIN,api1.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
