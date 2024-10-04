@@ -22,7 +22,7 @@ dns:
     fallback: ['https://cloudflare-dns.com/dns-query', 'https://208.67.220.220/dns-query', 'tls://8.8.4.4', 'tls://1.0.0.1:853', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-    - { name: ChatGPT解锁专用分流节点, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
+    - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
     - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: sg.555199.xyz, type: hysteria2, password: cd25434f-72e2-4fe3-bf54-42be5d303472, up: 35, down: 300 }
