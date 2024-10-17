@@ -27,7 +27,7 @@ jobs:
       # 使用运行环境的shell运行单个命令
       - name: 下载和修改文件
         run: |
-          curl -o 免费机场-付费机场 'https://api2.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=a3ce031825cd2dd3cb2b324f6e3e3f88'
+          curl -o 免费机场-付费机场 'https://api2.xn--bnq37rc0nw50b.com/api/v1/client/subscribe?token=a3ce031825cd2dd3cb2b324f6e3e3f88&flag=clashmeta'
           sed -i 's/down: 100/down: 400/g' 免费机场-付费机场
   
       - name: 提交和推送
