@@ -22,13 +22,13 @@ dns:
     fallback: ['https://cloudflare-dns.com/dns-query', 'https://208.67.220.220/dns-query', 'tls://8.8.4.4', 'tls://1.0.0.1:853', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-    - { name: 官网：, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: 3w.付费机场.com, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: 新加坡, server: newsg--ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 官网：, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 3w.付费机场.com, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: 新加坡, server: newsg--ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
 proxy-groups:
     - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
     - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
