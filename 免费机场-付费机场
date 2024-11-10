@@ -24,22 +24,23 @@ dns:
 proxies:
     - { name: 官网：, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
     - { name: 3w.付费机场.com, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
-    - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
+    - { name: ChatGPT解锁专用分流节点, type: vless, server: fr2.fogcdn.co.uk, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: fr.fogcdn.co.uk, network: ws, ws-opts: { path: /, headers: { Host: fr.fogcdn.co.uk } } }
+    - { name: 🇫🇷法国-CDN优化, type: vless, server: fr2.fogcdn.co.uk, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: false, flow: '', client-fingerprint: chrome, servername: fr.fogcdn.co.uk, network: ws, ws-opts: { path: /, headers: { Host: fr.fogcdn.co.uk } } }
     - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
     - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
     - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
     - { name: 新加坡, server: newsg--ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 300 }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡] }
-    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡], url: 'http://1.1.1.1', interval: 600 }
-    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 法国, 美国, 日本, 新加坡], url: 'http://1.1.1.1', interval: 450 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡], url: 'http://1.1.1.1', interval: 600 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 🇫🇷法国-CDN优化, 法国, 美国, 日本, 新加坡], url: 'http://1.1.1.1', interval: 450 }
 rules:
     - 'DOMAIN,api2.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
