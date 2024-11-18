@@ -27,7 +27,7 @@ proxies:
     - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
     - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
     - { name: 日本, server: newjp-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
-    - { name: 新加坡, server: newsg--ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: true, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
+    - { name: 新加坡, type: vless, server: newsg--ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: false, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: ssl.xn--94q57lcvpw50b.com }
     - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 100, down: 400 }
 proxy-groups:
     - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 日本, 新加坡, 法国] }
