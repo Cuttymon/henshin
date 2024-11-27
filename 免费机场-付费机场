@@ -39,8 +39,8 @@ proxy-groups:
     - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国] }
     - { name: Telegram分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国] }
     - { name: Reddit分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国] }
-    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国], url: 'http://1.1.1.1', interval: 600 }
-    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国], url: 'http://1.1.1.1', interval: 450 }
+    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国], url: 'http://1.1.1.1', interval: 43200 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, 日本, 法国], url: 'http://1.1.1.1', interval: 21600 }
 rules:
     - 'DOMAIN,api2.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
