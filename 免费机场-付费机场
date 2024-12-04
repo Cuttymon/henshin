@@ -23,26 +23,26 @@ dns:
 proxies:
     - { name: 官网：, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
     - { name: 3w.付费机场.com, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
-    - { name: ChatGPT解锁专用分流节点, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 15, down: 15 }
     - { name: 美国, server: newus-ceg5.555199.xyz, port: 54212, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 35, down: 400 }
-    - { name: 新加坡, type: vless, server: newsg--ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: ssl.xn--94q57lcvpw50b.com }
-    - { name: ipv6新加坡, type: vless, server: newsg-ipv6-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: ssl.xn--94q57lcvpw50b.com }
-    - { name: 日本, type: vless, server: newjp-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: ssl.xn--94q57lcvpw50b.com }
-    - { name: ipv6日本, type: vless, server: newjp-ipv6-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: ssl.xn--94q57lcvpw50b.com }
-    - { name: 法国, server: fr.555199.xyz, port: 58220, udp: true, skip-cert-verify: false, sni: ssl.xn--94q57lcvpw50b.com, type: hysteria2, password: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, up: 15, down: 15 }
+    - { name: 新加坡, type: vless, server: newsg--ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
+    - { name: ipv6新加坡, type: vless, server: newsg-ipv6-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
+    - { name: 日本, type: vless, server: newjp-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
+    - { name: ipv6日本, type: vless, server: newjp-ipv6-ceg5.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
+    - { name: 法国, type: vless, server: fr.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
+    - { name: ChatGPT解锁专用分流节点, type: vless, server: fr.555199.xyz, port: 443, uuid: 3f3be18e-42cc-4d67-bb2e-4a366fb16087, udp: true, tls: true, skip-cert-verify: true, flow: xtls-rprx-vision, client-fingerprint: chrome, servername: objectstorage.ap-seoul-1.oraclecloud.com }
 proxy-groups:
-    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Telegram分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: Reddit分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国] }
-    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国], url: 'http://1.1.1.1', interval: 43200 }
-    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, ChatGPT解锁专用分流节点, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国], url: 'http://1.1.1.1', interval: 21600 }
+    - { name: 代理节点选择, type: select, proxies: [自动选择, 故障转移, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Netflix分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Disney分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: YouTube分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Bahamut(动画疯)分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Spotify分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Google学术分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: ChatGPT分流, type: select, proxies: [ChatGPT解锁专用分流节点, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Telegram分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: Reddit分流, type: select, proxies: [代理节点选择, 官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点] }
+    - { name: 自动选择, type: url-test, proxies: [官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点], url: 'http://1.1.1.1', interval: 43200 }
+    - { name: 故障转移, type: fallback, proxies: [官网：, 3w.付费机场.com, 美国, 新加坡, ipv6新加坡, 日本, ipv6日本, 法国, ChatGPT解锁专用分流节点], url: 'http://1.1.1.1', interval: 21600 }
 rules:
     - 'DOMAIN,api2.xn--bnq37rc0nw50b.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理节点选择'
